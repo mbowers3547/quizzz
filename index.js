@@ -1,5 +1,3 @@
-
-
 var json = {
     title: "American History Quiz",
     showProgressBar: "bottom",
@@ -10,32 +8,32 @@ var json = {
             questions: [
                 {
                     type: "radiogroup",
-                    name: "civilwar",
-                    title: "When was the Civil War?",
-                    choices: ["1750-1800", "1800-1850", "1850-1900", "1900-1950"]
+                    name: "zebra",
+                    title: "What color are zebras?",
+                    choices: ["White with black stripes", "Black with white stripes", "Both of the above", "None of the above"], correctAnswer: "Black with white stripes"
                 }
             ]
         }, {
             questions: [
                 {
                     type: "radiogroup",
-                    name: "libertyordeath",
-                    title: "Who said 'Give me liberty or give me death?'",
-                    choices: ["James Brown", "James Madison", "Patrick Henry", "Buzz Lightyear"]
+                    name: "sleepy",
+                    title: "Which of the following animals sleep standing up?",
+                    choices: ["Gorillas", "Flamingos", "Camels", "Ravens"], correctAnswer:"Flamingos"
                 }
             ]
         }, {
             questions: [
                 {
                     type: "radiogroup",
-                    name: "magnacarta",
-                    title: "What is the Magna Carta?",
-                    choices: ["The foundation of the British parliamentary system", "A promise to the Carribean Queen", "The French Declaration of the Rights of Man", "The charter signed by the Pilgrims on the Mayflower"]
+                    name: "fast",
+                    title: "What is the fastest water animal?",
+                    choices: ["Porpoise", "Sailfish", "Flying fish", "Tuna"], correctAnswer: "Sailfish"
                 }
             ]
         }
     ],
-    completedHtml: "<p>Your anwers are:</p><p>When was the Civil War?: <b>{civilwar}</b>. The correct is: <b>1850-1900</b></p><p>Who said 'Give me liberty or give me death?': <b>{libertyordeath}</b>. The correct is: <b>Patrick Henry</b></p><p>What is the Magna Carta?: <b>{magnacarta}</b>. The correct is: <b>The foundation of the British parliamentary system</b></p>"
+    completedHtml: "<h4>You have answered correctly <b>{correctedAnswers}</b> questions from <b>{questionCount}</b>.</h4><p>Your anwers are:</p><p>When was the Civil War?: <b>{civilwar}</b>. The correct is: <b>1850-1900</b></p><p>Who said 'Give me liberty or give me death?': <b>{sleepy}</b>. The correct is: <b>Patrick Henry</b></p><p>What is the Magna Carta?: <b>{magnacarta}</b>. The correct is: <b>The foundation of the British parliamentary system</b></p>"
 };
 
 window.survey = new Survey.Model(json);
