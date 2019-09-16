@@ -33,7 +33,7 @@ var json = {
             ]
         }
     ],
-    completedHtml: "<h4>You have answered correctly <b>{correctedAnswers}</b> questions from <b>{questionCount}</b>.</h4><p>Your anwers are:</p><p>When was the Civil War?: <b>{civilwar}</b>. The correct is: <b>1850-1900</b></p><p>Who said 'Give me liberty or give me death?': <b>{sleepy}</b>. The correct is: <b>Patrick Henry</b></p><p>What is the Magna Carta?: <b>{magnacarta}</b>. The correct is: <b>The foundation of the British parliamentary system</b></p>"
+    completedHtml: "<h4>You have answered correctly <b>{correctedAnswers}</b> questions from <b>{questionCount}</b>.</h4><p>Your anwers are:</p><p>What color are zebras?: <b>Your answer: {zebra}</b>. The correct is: <b>Black with white stripes</b></p><p>Which of the following animals sleep standing up?: <b>Your answer: {sleepy}</b>. The correct is: <b>Flamingo</b></p><p>What is the fastest water animal?: <b>Your answer: {fast}</b>. The correct is: <b>Sailfish</b></p>"
 };
 
 window.survey = new Survey.Model(json);
@@ -43,7 +43,6 @@ survey
     .add(function (result) {
         document
             .querySelector('#surveyResult')
-            .textContent = "Result JSON:\n" + JSON.stringify(result.data, null, 3);
     });
 
 $("#surveyElement").Survey({model: survey});
