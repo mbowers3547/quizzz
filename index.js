@@ -1,5 +1,5 @@
 var json = {
-    title: "American History Quiz",
+    title: "Quiz Assessment",
     showProgressBar: "bottom",
     goNextPageAutomatic: true,
     showNavigationButtons: false,
